@@ -1,0 +1,27 @@
+@import './var';
+.debug {
+    background-color: rgba(255, 2, 2, .4);
+    border: 1px solid black;
+}
+
+.container {
+    width: 70%;
+}
+
+.lm-btn {
+    background-color: $primary-color;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.h200 {
+    height: 200px;
+}
+
+.h300 {
+    height: 300px;
+}
+
+.h500 {
+    height: 500px;
+}

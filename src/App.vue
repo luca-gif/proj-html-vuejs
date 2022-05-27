@@ -2,7 +2,6 @@
   <div id="app">
 
     <HeaderComp />
-    <WelcomeComponent />
     <MainComp />
     <FooterComp />
 
@@ -13,8 +12,6 @@
 import HeaderComp from './components/HeaderComp.vue';
 import MainComp from './components/MainComp.vue';
 import FooterComp from './components/FooterComp.vue';
-import WelcomeComponent from './components/WelcomeComponent.vue';
-
 
 
 export default {
@@ -23,7 +20,6 @@ export default {
     HeaderComp,
     MainComp,
     FooterComp,
-    WelcomeComponent
 }
 }
 </script>

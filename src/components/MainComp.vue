@@ -14,26 +14,26 @@
           
           <div class="col-3 text-center">
             <img src="../assets/img/icon-1.png" alt="">
-            <p>SAME DAY APPOINTMENTS</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim</p>
+            <p class="">SAME DAY APPOINTMENTS</p>
+            <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim</p>
           </div>
 
           <div class="col-3 text-center">
             <img src="../assets/img/icon-2.png" alt="">
             <p>WORLD CLASS FACILITIES</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim</p>
+            <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim</p>
           </div>
 
           <div class="col-3 text-center">
             <img src="../assets/img/icon-3.png" alt="">
             <p>EXPERT DOCTORS</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim</p>
+            <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim</p>
           </div>
 
           <div class="col-3 text-center">
             <img src="../assets/img/icon-4.png" alt="">
             <p>COMPLEMENTARY THERAPIES</p>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim</p>
+            <p class="text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptam accusantim</p>
           </div>
           
         </div>
@@ -50,6 +50,7 @@
 
             <img src="../assets/img/icon-5.png" alt="">
             <h2>MEET OUR DOCTORS</h2>
+            <div class="border w-50 m-auto my-4"></div>
             <p>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
             </p>
@@ -59,14 +60,30 @@
         <div class="container">
 
           <div class="row py-4">
-            <div class="col-4 debug h200">
-                ciao
+            <div class="col-4 card">
+                  <img src="../assets/img/doctor-1-200x206.jpg" alt="">
+                  <div class="card-text">
+                    <h6 class="pt-3">JON SNOW</h6>
+                  <h6>Anesthesiologist</h6>
+                  <p class="py-3 text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                  </div>
             </div>
-            <div class="col-4 col-center debug h200">
-                ciao
+
+            <div class="col-4 card col-center">
+                <img src="../assets/img/doctor-2-200x206.jpg" alt="">
+                <div class="card-text">
+                  <h6 class="pt-3">TONY STARK</h6>
+                  <h6>Cardiologist</h6>
+                  <p class="py-3 text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                </div>
             </div>
-            <div class="col-4 debug h200">
-                ciao
+            <div class="col-4 card">
+                <img src="../assets/img/doctor-3-200x206.jpg" alt="">
+                <div class="card-text">
+                  <h6 class="pt-3">ANNA SMITH</h6>
+                  <h6>Nurse Practitioner</h6>
+                  <p class="py-3 text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                </div>
             </div>
 
           </div>
@@ -82,6 +99,7 @@
             <div class="services-text">
               <img src="../assets/img/icon-6.png" alt="">
               <h2>OUR HEALTH SERVICES</h2>
+              <div class="border w-50 m-auto my-4"></div>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
               </p>
@@ -94,19 +112,19 @@
             <div class="col-4">
               <img src="../assets/img/icon-14.png" alt="">
               <p>REHABILITATION CENTER</p>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
+              <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
             </div>
 
             <div class="col-4">
               <img src="../assets/img/icon-15.png" alt="">
               <p>DENTAL IMPLANTS</p>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
+              <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
             </div>
 
             <div class="col-4">
               <img src="../assets/img/icon-16.png" alt="">
               <p>MEDICINE RESEARCH</p>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
+              <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
             </div>
 
             </div>
@@ -115,19 +133,19 @@
             <div class="col-4">
               <img src="../assets/img/icon-11.png" alt="">
               <p>BLOOD BANK</p>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
+              <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
             </div>
             
             <div class="col-4">
               <img src="../assets/img/icon-12.png" alt="">
               <p>PHARMACEUTICAL ADVICE</p>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
+              <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
             </div>
 
             <div class="col-4">
               <img src="../assets/img/icon-13.png" alt="">
               <p>MEDICAL COUNSELING</p>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
+              <p class="text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
             </div>
 
           </div>
@@ -143,6 +161,7 @@
             
               <img src="../assets/img/icon-7.png" alt="">
               <h2 class="my-3">TOUR OUR FACILITIES</h2>
+              <div class="border w-50 m-auto my-4"></div>
               <p class="my-3">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
               </p>
@@ -153,7 +172,7 @@
 
       </section>
 
-     <div class="skills">
+     <div class="skills text-white">
         <div class="row text-center">
         
         <div class="first-skill col-4 py-5">
@@ -206,13 +225,12 @@
 
       <div class="banner d-flex justify-content-evenly align-items-center">
 
-        <img src="../assets/img/client-logos-1.png" alt="">
-        <img src="../assets/img/client-logos-3.png" alt="">
-        <img src="../assets/img/client-logos-2.png" alt="">
-        <img src="../assets/img/client-logos-4.png" alt="">
+        <img src="../assets/img/client-logos-1-200x188.png" alt="">
+        <img src="../assets/img/client-logos-3-200x188.png" alt="">
+        <img src="../assets/img/client-logos-2-200x188.png" alt="">
+        <img src="../assets/img/client-logos-4-200x188.png" alt="">
 
       </div>
-
   </div>
 </template>
 
@@ -230,16 +248,33 @@ export default {
     line-height: 2rem;
   }
 
+  .col-3{
+    p{
+      font-size: 13px;
+    }
+  }
+
   .meet-our-doctors{
     background-color: #f7f7f7;
 
-    h2{
-      border-bottom: 1px solid grey;
-      padding-bottom: 20px;
-    }
-
     .col-center{
       padding: 0 20px;
+      margin: 0 30px;
+    }
+
+    .card{
+      padding:0;
+      border: 0;
+      border-radius: 0;
+      width: calc(100% / 3 - 20px);
+      text-align: left;
+
+      p{
+        font-size: 13px;
+      }
+      .card-text{
+        padding: 0 35px;
+      }
     }
   }
 
@@ -263,24 +298,27 @@ export default {
     .first-skill{
       background-color: #3aafbf;
       .lm-btn{
-        border: white 1px solid;
         background-color: #3aafbf;
+        border: white 2px solid;
+        cursor: pointer;
       }
     }
 
     .second-skill{
       background-color: #3597c3;
       .lm-btn{
-        border: white 1px solid;
         background-color: #3597c3;
+        border: white 2px solid;
+        cursor: pointer;
       }
     }
 
     .third-skill{
       background-color: #327ec7;
       .lm-btn{
-        border: white 1px solid;
         background-color: #327ec7;
+        border: white 2px solid;
+        cursor: pointer;
       }
     }
 
@@ -326,7 +364,7 @@ export default {
 
     .banner{
       background-image: linear-gradient(to right,#3bafbf,#327fc7);
-      height: 300px;
+      height: 250px;
       img{
         cursor: pointer;
       }

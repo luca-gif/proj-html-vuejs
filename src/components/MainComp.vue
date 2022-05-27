@@ -192,18 +192,26 @@
             </p>
 
             <form class="">
-              <input class="w-50" type="text" placeholder="Name*">
-              <input class="w-50" type="email" placeholder="Email*">
-              <input class="w-50" type="text" placeholder="Phone Number">
-              <input class="w-50" type="input" placeholder="Appointment Date">
-              <textarea class="w-100" name="" id="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
-              <button class="lm-btn w-100 text-white">MAKE AN APPOINTMENT</button>
+              <input type="text" placeholder="Name*">
+              <input type="email" placeholder="Email*">
+              <input type="text" placeholder="Phone Number">
+              <input type="input" placeholder="Appointment Date">
+              <textarea name="" id="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
+              <button class="lm-btn text-white">MAKE AN APPOINTMENT</button>
             </form>
 
         </div>
        </div>
-
      </section>
+
+      <div class="banner d-flex justify-content-evenly align-items-center">
+
+        <img src="../assets/img/client-logos-1.png" alt="">
+        <img src="../assets/img/client-logos-3.png" alt="">
+        <img src="../assets/img/client-logos-2.png" alt="">
+        <img src="../assets/img/client-logos-4.png" alt="">
+
+      </div>
 
   </div>
 </template>
@@ -284,18 +292,44 @@ export default {
     }
 
     form{
+      input{
+        width: calc(50% - 20px);
+        margin: 10px;
+      }
+
+      textarea{
+        width: calc(100% - 20px);
+        margin: 10px;
+      }
+
       input,
       textarea{
         background-color: transparent;
+        color: #fff;
         border: 1px solid #fff;
-        padding: 5px  15px;
-      }
-       input::placeholder,
-      textarea::placeholder{
+        padding: 6px  15px;
+        &:focus{
+          outline:none;
+        }
+        &::placeholder{
         color: #fff;
         font-size: 10px;
+        }
+      }
+
+      button{
+        width: calc(100% - 20px);
+        font-weight: bold;
+        border: transparent;
+      }
+    }
+
+    .banner{
+      background-image: linear-gradient(to right,#3bafbf,#327fc7);
+      height: 300px;
+      img{
+        cursor: pointer;
       }
     }
   
-
 </style>

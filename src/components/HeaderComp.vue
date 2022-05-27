@@ -22,7 +22,7 @@
       </nav>
 
       <div class="header-bottom container m-auto d-flex align-items-center">
-        <div class="header-container w-50">
+        <div class="header-container">
         <h1>Caring <span>For Life</span></h1>
         <p>Kind words can be short and easy to speak, but their echoes are truly endless. Avada Health focuses on you as if it was our own family.</p>
         <span class="lm-btn">Learn More</span>
@@ -70,12 +70,16 @@ nav{
     a{
       color: #fff
     }
-  }
-
-  
+  }  
 }
+
+.header-container{
+  width: 60%;
+  height: 250px;
+}
+
 .header-bottom{
-  height: calc(580px - 140px);
+  height: calc(600px - 140px);
   font-size: 1.1rem;
 
   h1{

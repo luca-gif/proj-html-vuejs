@@ -29,6 +29,4 @@ export default {
 @import './assets/style/_utils';
 @import './assets/style/_var';
 
-
-
 </style>

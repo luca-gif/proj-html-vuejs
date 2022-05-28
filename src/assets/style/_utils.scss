@@ -18,16 +18,41 @@
     background-color: $primary-color;
     text-transform: uppercase;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
-.h200 {
-    height: 200px;
+.social {
+    padding-top: 20px;
 }
 
-.h300 {
-    height: 300px;
+.social-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 30px;
+    color: #fff;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover {
+        transform: translateY(-15px);
+    }
 }
 
-.h500 {
-    height: 500px;
+.facebook {
+    background-color: #3c5998;
+}
+
+.twitter {
+    background-color: #54acee;
+}
+
+.instagram {
+    background-color: #3f729b;
+}
+
+.youtube {
+    background-color: #cd201f;
 }

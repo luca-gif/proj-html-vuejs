@@ -4,20 +4,26 @@
       <div class="row">
 
         <div class="col-4">
-          <img src="../assets/img/medical_logo_1x_dark.png" alt="">
+          <img src="../assets/img/medical_logo_1x_dark.png" alt="Avada logo">
           <p class="py-3 text-muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolemue launti totam aperiam, eaque ipsa quae abillo. Invente veriatis et quasi architecto beatae luptatem accusantium, remaperiamsiat. Voluptatem accusest etsium doloremque laudaien. Lorem ipsum sits dolores ets unser.</p>
         <div class="border mb-1"></div>
         <p class="text-muted">LEARN MORE ABOUT US</p>
+          <div class="social d-flex mb-4">
+            <i class="fa-brands fa-facebook-f facebook social-icon"></i>
+            <i class="fa-brands fa-twitter twitter social-icon"></i>
+            <i class="fa-brands fa-instagram instagram social-icon"></i>
+            <i class="fa-brands fa-youtube youtube instagram social-icon"></i>
+          </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-4 contact">
           <div>CONTACT INFORMATION</div>
           <div class="border-blu my-3"></div>
-          <div class="text-muted">
-            121 King Street, London United Kingdom 
+          <div class="py-2 text-muted">
+            <i class="fa-solid fa-location-dot"></i> 121 King Street, London United Kingdom 
           </div>
            <div class="text-muted">
-            1.800.458.556
+            <i class="fa-solid fa-phone-flip"></i> 1.800.458.556
            </div>
           
         </div>
@@ -26,11 +32,11 @@
           <div>MEDICAL DEPARTMENT</div>
           <div class="border-blu my-3"></div>
           <ul>
-            <li><a href="#">Cardioligy</a></li>
-            <li><a href="#">Pedriatics</a></li>
-            <li><a href="#">Diabetes Care</a></li>
-            <li><a href="#">Pre-natel Care</a></li>
-            <li><a href="#">Ultrasound Echocardiogram</a></li>
+            <li>Cardioligy</li>
+            <li>Pedriatics</li>
+            <li>Diabetes Care</li>
+            <li>Pre-natel Care</li>
+            <li>Ultrasound Echocardiogram</li>
           </ul>
 
           <div class="lm-btn">
@@ -56,9 +62,17 @@ export default {
 
 @import '../assets/style/var';
 
+
+  .contact i{
+    color: $primary-color;
+    width: 20px;
+    margin-right: 5px;
+    text-align: center;
+    
+  }
   .border-blu{
     background-color: $primary-color;
-    height: 1.5px;
+    height: 2px;
     width: 40px;
   }
 
@@ -67,12 +81,13 @@ export default {
     border: 1px solid black;
     width: 250px;
     text-align: center;
-    cursor: pointer;
     margin-top: 30px;
-  }
-
-  a{
-    color: black;
+    
+    &:hover{
+      background-color: $primary-color;
+      color: #fff;
+      border: transparent;
+    }
   }
 
   .copyright{

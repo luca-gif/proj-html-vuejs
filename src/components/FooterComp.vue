@@ -28,15 +28,12 @@
           
         </div>
         
-        <div class="col-4">
+        <div class="col-4 medical-department">
           <div>MEDICAL DEPARTMENT</div>
           <div class="border-blu my-3"></div>
           <ul>
-            <li>Cardioligy</li>
-            <li>Pedriatics</li>
-            <li>Diabetes Care</li>
-            <li>Pre-natel Care</li>
-            <li>Ultrasound Echocardiogram</li>
+            <li v-for="list in footerList" :key="`footer${list}`"><i class="fa-solid fa-circle-chevron-right"></i> {{list.name}}</li>
+            
           </ul>
 
           <div class="lm-btn">
@@ -55,6 +52,9 @@
 <script>
 export default {
   name: 'FooterComp',
+  props:{
+    footerList: Array
+  }
 }
 </script>
 
@@ -70,6 +70,13 @@ export default {
     text-align: center;
     
   }
+
+  .medical-department i{
+    color: $primary-color;
+    font-size: 20px;
+    margin-right: 5px;
+    }
+
   .border-blu{
     background-color: $primary-color;
     height: 2px;

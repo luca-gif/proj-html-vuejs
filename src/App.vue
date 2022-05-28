@@ -1,9 +1,15 @@
 <template>
   <div id="app">
 
-    <HeaderComp />
+    <HeaderComp
+    :headerList="myHeader"
+    />
+
     <MainComp />
-    <FooterComp />
+
+    <FooterComp
+    :footerList="myFooter"
+    />
 
   </div>
 </template>
@@ -13,14 +19,23 @@ import HeaderComp from './components/HeaderComp.vue';
 import MainComp from './components/MainComp.vue';
 import FooterComp from './components/FooterComp.vue';
 
+import headerList from './assets/json/headerList'
+import footerList from './assets/json/footerList'
+
 
 export default {
   name: 'App',
+  data(){
+    return{
+      myHeader: headerList,
+      myFooter: footerList,
+    }
+  },
   components: {
     HeaderComp,
     MainComp,
     FooterComp,
-}
+  }
 }
 </script>
 

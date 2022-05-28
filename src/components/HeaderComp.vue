@@ -8,16 +8,12 @@
         <div class="nav-logo">
           <img src="../assets/img/medical_logo_1x_light.png" alt="">
         </div>
-
         
           <ul class="d-flex align-items-center">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Departments</a></li>
-            <li><a href="#">Articles</a></li>
+            <li v-for="list in headerList" :key="list"><a href="#">{{list.name}}</a></li>
+            
             <li class="lm-btn"><a href="#">Make Appointment</a></li>
           </ul>
-        
         
       </nav>
 
@@ -29,16 +25,17 @@
         </div>
       </div>
 
-
     </header>
-
-
   </div>
 </template>
 
 <script>
 export default {
   name: 'HeaderComp',
+
+  props:{
+    headerList: Array
+  }
 }
 </script>
 

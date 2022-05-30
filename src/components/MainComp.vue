@@ -257,10 +257,10 @@
     <div class="banner d-flex justify-content-center align-items-center">
 
        <VueSlickCarousel class="w-75" :arrows="true" :dots="false" v-bind="settings">
-      <div><img src="../assets/img/client-logos-1.png" alt=""></div>
-      <div><img src="../assets/img/client-logos-3.png" alt=""></div>
-      <div><img src="../assets/img/client-logos-2.png" alt=""></div>
-      <div><img src="../assets/img/client-logos-4.png" alt=""></div>
+      <div class="text-center"><img src="../assets/img/client-logos-1.png" alt=""></div>
+      <div class="text-center"><img src="../assets/img/client-logos-3.png" alt=""></div>
+      <div class="text-center"><img src="../assets/img/client-logos-2.png" alt=""></div>
+      <div class="text-center"><img src="../assets/img/client-logos-4.png" alt=""></div>
       <div><img src="../assets/img/client-logos-2.png" alt=""></div>
     </VueSlickCarousel>
 
@@ -290,7 +290,7 @@ export default {
         "slidesToScroll": 1,
         "touchThreshold": 5,
         "autoplay": true,
-        "autoplaySpeed": 2500,
+        "autoplaySpeed": 3000,
       }
     }
   },
@@ -447,7 +447,6 @@ form {
 
   img {
     cursor: pointer;
-    margin-left: 30px;
   }
 }
 </style>

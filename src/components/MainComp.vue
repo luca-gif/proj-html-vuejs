@@ -319,12 +319,11 @@ p {
 
   img{
 
-    transition: all .5s; 
-    margin: 15px;  
+    transition: all .5s;  
   
     &:hover{
       transform: scale(105%);
-      box-shadow: 0 0 8px ;
+      box-shadow: 0 0 5px gray ;
       
     }
   }
@@ -341,6 +340,7 @@ p {
     border-radius: 0;
     width: calc(100% / 3 - 20px);
     text-align: left;
+    overflow: visible;
 
     p {
       font-size: 13px;

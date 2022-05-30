@@ -62,13 +62,12 @@
       <div class="container">
 
         <div class="row py-4">
-          <div class="col-4 card">
-            <img src="../assets/img/doctor-1-200x206.jpg" alt="">
+          <div v-for="doctor in doctors" :key="doctor.id" class="col-4 card">
+            <img :src= "doctor.image" :alt="doctor.nome">
             <div class="card-text">
-              <h6 class="pt-3">JON SNOW</h6>
-              <h6>Anesthesiologist</h6>
-              <p class="pt-3 text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque</p>
+              <h6 class="pt-3">{{doctor.nome}}</h6>
+              <h6>{{doctor.professione}}</h6>
+              <p class="pt-3 text-muted">{{doctor.descrizione}}</p>
               <div class="social d-flex mb-4">
                 <i class="fa-brands fa-facebook-f facebook social-icon"></i>
                 <i class="fa-brands fa-twitter twitter social-icon"></i>
@@ -77,7 +76,7 @@
             </div>
           </div>
 
-          <div class="col-4 card col-center">
+          <!-- <div class="col-4 card col-center">
             <img src="../assets/img/doctor-2-200x206.jpg" alt="">
             <div class="card-text">
               <h6 class="pt-3">TONY STARK</h6>
@@ -104,7 +103,7 @@
                 <i class="fa-brands fa-instagram instagram social-icon"></i>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>
@@ -255,12 +254,15 @@
       </div>
     </section>
 
-    <div class="banner d-flex justify-content-evenly align-items-center">
+    <div class="banner d-flex justify-content-center align-items-center">
 
-      <img src="../assets/img/client-logos-1-200x188.png" alt="">
-      <img src="../assets/img/client-logos-3-200x188.png" alt="">
-      <img src="../assets/img/client-logos-2-200x188.png" alt="">
-      <img src="../assets/img/client-logos-4-200x188.png" alt="">
+       <VueSlickCarousel class="w-75" :arrows="true" :dots="false" v-bind="settings">
+      <div><img src="../assets/img/client-logos-1.png" alt=""></div>
+      <div><img src="../assets/img/client-logos-3.png" alt=""></div>
+      <div><img src="../assets/img/client-logos-2.png" alt=""></div>
+      <div><img src="../assets/img/client-logos-4.png" alt=""></div>
+      <div><img src="../assets/img/client-logos-2.png" alt=""></div>
+    </VueSlickCarousel>
 
     </div>
   </div>
@@ -268,8 +270,34 @@
 
 <script>
 
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+
+import VueSlickCarousel from 'vue-slick-carousel';
+
 export default {
   name: 'MainComp',
+  components: { VueSlickCarousel },
+
+  data(){
+      return{
+          settings: {
+        "dots": false,
+        "focusOnSelect": false,
+        "infinite": true,
+        "speed": 1000,
+        "slidesToShow": 4,
+        "slidesToScroll": 1,
+        "touchThreshold": 5,
+        "autoplay": true,
+        "autoplaySpeed": 2500,
+      }
+    }
+  },
+
+  props:{
+    doctors: Array
+  }
 }
 </script>
 
@@ -289,6 +317,18 @@ p {
 .meet-our-doctors {
   background-color: #f7f7f7;
 
+  img{
+
+    transition: all .5s; 
+    margin: 15px;  
+  
+    &:hover{
+      transform: scale(105%);
+      box-shadow: 0 0 8px ;
+      
+    }
+  }
+
   .col-center {
     padding: 0 20px;
     margin: 0 30px;
@@ -297,6 +337,7 @@ p {
   .card {
     padding: 0;
     border: 0;
+    margin: 0 10px;
     border-radius: 0;
     width: calc(100% / 3 - 20px);
     text-align: left;
@@ -403,10 +444,12 @@ form {
 
 .banner {
   background-image: linear-gradient(to right, #3bafbf, #327fc7);
-  height: 250px;
+  height: 300px;
+
 
   img {
     cursor: pointer;
+    margin-left: 30px;
   }
 }
 </style>

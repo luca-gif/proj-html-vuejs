@@ -3,7 +3,7 @@
 
     <HeaderComp :headerList="myHeader" />
 
-    <MainComp />
+    <MainComp :doctors="ourDoctors" />
 
     <FooterComp :footerList="myFooter" />
 
@@ -17,6 +17,7 @@ import FooterComp from './components/FooterComp.vue';
 
 import headerList from './assets/json/headerList'
 import footerList from './assets/json/footerList'
+import doctorsList from './assets/json/doctors'
 
 
 export default {
@@ -25,6 +26,7 @@ export default {
     return {
       myHeader: headerList,
       myFooter: footerList,
+      ourDoctors: doctorsList,
     }
   },
   components: {

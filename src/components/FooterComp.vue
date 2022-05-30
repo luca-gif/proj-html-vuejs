@@ -25,15 +25,15 @@
            <div class="text-muted">
             <i class="fa-solid fa-phone-flip"></i> 1.800.458.556
            </div>
-          
         </div>
         
         <div class="col-4 medical-department">
           <div>MEDICAL DEPARTMENT</div>
           <div class="border-blu my-3"></div>
           <ul>
-            <li v-for="list in footerList" :key="`footer${list}`"><i class="fa-solid fa-circle-chevron-right"></i> {{list.name}}</li>
-            
+            <li v-for="list in footerList" :key="`footer${list}`" class="d-flex align-items-center">
+            <i class="fa-solid fa-circle-check"></i> {{list.name}}
+            </li>
           </ul>
 
           <div class="lm-btn">
@@ -62,13 +62,11 @@ export default {
 
 @import '../assets/style/var';
 
-
   .contact i{
     color: $primary-color;
     width: 20px;
     margin-right: 5px;
     text-align: center;
-    
   }
 
   .medical-department i{

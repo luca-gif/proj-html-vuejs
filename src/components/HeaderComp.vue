@@ -10,7 +10,8 @@
         </div>
         
           <ul class="d-flex align-items-center">
-            <li v-for="list in headerList" :key="list"><a href="#">{{list.name}}</a></li>
+
+            <li @click="list.isActive = !list.isActive" v-for="list in headerList" :key="list"><a :class="{'active' : list.isActive}" href="#">{{list.name}}</a></li>
             
             <li class="lm-btn"><a href="#">Make Appointment</a></li>
           </ul>
@@ -67,7 +68,7 @@ nav{
     a{
       color: #fff
     }
-  }  
+  } 
 }
 
 .header-container{
@@ -93,8 +94,10 @@ nav{
 
 }
 
-
-
-
+.active{
+  color: $primary-color;
+  font-weight: 900;
+  text-decoration:overline;
+}
 
 </style>

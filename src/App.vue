@@ -1,15 +1,11 @@
 <template>
   <div id="app">
 
-    <HeaderComp
-    :headerList="myHeader"
-    />
+    <HeaderComp :headerList="myHeader" />
 
     <MainComp />
 
-    <FooterComp
-    :footerList="myFooter"
-    />
+    <FooterComp :footerList="myFooter" />
 
   </div>
 </template>
@@ -25,8 +21,8 @@ import footerList from './assets/json/footerList'
 
 export default {
   name: 'App',
-  data(){
-    return{
+  data() {
+    return {
       myHeader: headerList,
       myFooter: footerList,
     }
@@ -43,5 +39,4 @@ export default {
 @import './assets/style/_global';
 @import './assets/style/_utils';
 @import './assets/style/_var';
-
 </style>

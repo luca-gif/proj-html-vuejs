@@ -1,6 +1,6 @@
 export default [{
         name: "Home",
-        isActive: false,
+        isActive: true,
     },
     {
         name: "About",

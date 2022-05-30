@@ -246,7 +246,7 @@
             <input type="email" placeholder="Email*">
             <input type="text" placeholder="Phone Number">
             <input type="input" placeholder="Appointment Date">
-            <textarea name="" id="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
+            <textarea name="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
             <button class="lm-btn text-white">MAKE AN APPOINTMENT</button>
           </form>
 
@@ -318,13 +318,11 @@ p {
   background-color: #f7f7f7;
 
   img{
-
     transition: all .5s;  
   
     &:hover{
       transform: scale(105%);
       box-shadow: 0 0 5px gray ;
-      
     }
   }
 

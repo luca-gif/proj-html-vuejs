@@ -242,11 +242,11 @@
           </p>
 
           <form class="">
-            <input type="text" v-model="newAppointment.name" placeholder="Name*">
-            <input type="email" v-model="newAppointment.email" placeholder="Email*">
-            <input type="text" v-model="newAppointment.phone" placeholder="Phone Number">
-            <input type="input" v-model="newAppointment.date" placeholder="Appointment Date">
-            <textarea name="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
+            <input @keyup.enter="apiSend()" type="text" v-model.trim="newAppointment.name" placeholder="Name*">
+            <input @keyup.enter="apiSend()" type="email" v-model.trim="newAppointment.email" placeholder="Email*">
+            <input @keyup.enter="apiSend()" type="text" v-model.trim="newAppointment.phone" placeholder="Phone Number">
+            <input @keyup.enter="apiSend()" type="input" v-model.trim="newAppointment.date" placeholder="Appointment Date">
+            <textarea v-model.trim="newAppointment.request" name="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
             <div @click="apiSend()" class="lm-btn insert text-white">MAKE AN APPOINTMENT</div>
           </form>
 
@@ -292,16 +292,15 @@ export default {
   data(){
       return{
         
+        endpoint: 'http://localhost:3000/clienti',
         arrData: [],
-
         newAppointment: {
             name: '',
             email: '',
             phone: '',
-            date: ''
+            date: '',
+            request: ''
         },
-
-        endpoint: 'http://localhost:3000/clienti',
 
         settings: {
           "dots": false,

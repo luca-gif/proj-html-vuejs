@@ -242,12 +242,12 @@
           </p>
 
           <form class="">
-            <input type="text" v-model="appointmentName" placeholder="Name*">
-            <input type="email" v-model="appointmentEmail" placeholder="Email*">
-            <input type="text" v-model="appointmentPhone" placeholder="Phone Number">
-            <input type="input" v-model="appointmentDate" placeholder="Appointment Date">
+            <input type="text" v-model="newAppointment.name" placeholder="Name*">
+            <input type="email" v-model="newAppointment.email" placeholder="Email*">
+            <input type="text" v-model="newAppointment.phone" placeholder="Phone Number">
+            <input type="input" v-model="newAppointment.date" placeholder="Appointment Date">
             <textarea name="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
-            <div @click="apiSend()" class="lm-btn text-white">MAKE AN APPOINTMENT</div>
+            <div @click="apiSend()" class="lm-btn insert text-white">MAKE AN APPOINTMENT</div>
           </form>
 
         </div>
@@ -291,12 +291,15 @@ export default {
 
   data(){
       return{
-        appointmentName: '',
-        appointmentEmail: '',
-        appointmentPhone: '',
-        appointmentDate: '',
-
+        
         arrData: [],
+
+        newAppointment: {
+            name: '',
+            email: '',
+            phone: '',
+            date: ''
+        },
 
         endpoint: 'http://localhost:3000/clienti',
 
@@ -328,27 +331,13 @@ export default {
     },
 
     apiSend(){
-      axios.post(this.endpoint)
+      axios.post(this.endpoint, this.newAppointment)
       .then((r) => {
-        this.arrData = {
-            "name": this.appointmentName,
-            "email": this.appointmentEmail,
-            "phone": this.appointmentPhone,
-            "date": this.appointmentDate
-        }
-        // this.arrData.push(r.data)
-
-        console.log('r.data ' +  r.data)
-        console.log('arrdata ' +this.arrData)
-
+        console.log(r.data)
         this.apiRequest()
-        //console.log(r.data)
       })
     }
   },
-  mounted(){
-    this.apiRequest()
-  }
 }
 </script>
 
@@ -484,8 +473,9 @@ form {
     }
   }
 
-  button {
+  .insert {
     width: calc(100% - 20px);
+    margin-left: 10px;
     font-weight: bold;
     border: transparent;
   }

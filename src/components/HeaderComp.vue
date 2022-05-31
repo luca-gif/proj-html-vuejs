@@ -122,11 +122,12 @@ nav{
 }
 
 .header-bottom{
-  height: calc(600px - 140px);
+  height: calc(660px - 140px);
   font-size: 1.1rem;
 
   h1{
     font-size: 60px;
+     overflow: hidden;
   }
 
   h1 span{

@@ -39,13 +39,6 @@
         <div class="phone"> +44(0) 1865 339665</div>
       </div>
 
-      
-      <a href="#">
-        <div class="anchor">
-          <i class="fa-solid fa-angle-up"></i>
-        </div>
-      </a>
-
     </header>
   </div>
 </template>
@@ -113,7 +106,7 @@ nav{
 
 .lm-btn:hover{
   background-color: #327ec7;
-  transition: all .4s;
+  transition: all .3s;
 }
 
 .header-container{
@@ -164,35 +157,10 @@ nav{
     height: 30px;
   }
 
-  
-}
-
-.anchor{
-  position: fixed;
-  bottom: 0;
-  right: 70px;
-  height: 35px;
-  width: 50px;
-  background-color: #484848;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-  transition: all .6s;
-
-  &:hover{
-    background-color: $primary-color;
-  }
-
-  i{
-    color: #fff;
-  }
 }
 
 .active{
   color: $primary-color;
-  font-weight: 900;
   text-decoration:overline;
 }
 

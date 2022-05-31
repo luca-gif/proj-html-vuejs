@@ -45,7 +45,7 @@
 
     <!-- Meet our doctors -->
 
-    <section class="meet-our-doctors text-center py-5">
+    <section  class="meet-our-doctors text-center py-5">
       <div class="doctors-text container">
         <div class="container">
 
@@ -242,12 +242,12 @@
           </p>
 
           <form class="">
-            <input type="text" placeholder="Name*">
-            <input type="email" placeholder="Email*">
-            <input type="text" placeholder="Phone Number">
-            <input type="input" placeholder="Appointment Date">
+            <input type="text" v-model="appointmentName" placeholder="Name*">
+            <input type="email" v-model="appointmentEmail" placeholder="Email*">
+            <input type="text" v-model="appointmentPhone" placeholder="Phone Number">
+            <input type="input" v-model="appointmentDate" placeholder="Appointment Date">
             <textarea name="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
-            <button class="lm-btn text-white">MAKE AN APPOINTMENT</button>
+            <div @click="apiSend()" class="lm-btn text-white">MAKE AN APPOINTMENT</div>
           </form>
 
         </div>
@@ -265,15 +265,25 @@
     </VueSlickCarousel>
 
     </div>
+
+    <!-- Ancora -->
+
+      <a href="#">
+        <div class="anchor">
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+      </a>
+
   </div>
 </template>
 
 <script>
 
+import axios from 'axios';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
-
 import VueSlickCarousel from 'vue-slick-carousel';
+
 
 export default {
   name: 'MainComp',
@@ -281,22 +291,63 @@ export default {
 
   data(){
       return{
-          settings: {
-        "dots": false,
-        "focusOnSelect": false,
-        "infinite": true,
-        "speed": 1000,
-        "slidesToShow": 4,
-        "slidesToScroll": 1,
-        "touchThreshold": 5,
-        "autoplay": true,
-        "autoplaySpeed": 3000,
-      }
+        appointmentName: '',
+        appointmentEmail: '',
+        appointmentPhone: '',
+        appointmentDate: '',
+
+        arrData: [],
+
+        endpoint: 'http://localhost:3000/clienti',
+
+        settings: {
+          "dots": false,
+          "focusOnSelect": false,
+          "infinite": true,
+          "speed": 1000,
+          "slidesToShow": 4,
+          "slidesToScroll": 1,
+          "touchThreshold": 5,
+          "autoplay": true,
+          "autoplaySpeed": 3000,
+        }
     }
   },
 
   props:{
     doctors: Array
+  },
+
+    methods:{
+    apiRequest(){
+      axios.get(this.endpoint)
+      .then((r) => {
+        this.arrData = r.data
+        console.log(this.arrData)
+      })
+    },
+
+    apiSend(){
+      axios.post(this.endpoint)
+      .then((r) => {
+        this.arrData = {
+            "name": this.appointmentName,
+            "email": this.appointmentEmail,
+            "phone": this.appointmentPhone,
+            "date": this.appointmentDate
+        }
+        // this.arrData.push(r.data)
+
+        console.log('r.data ' +  r.data)
+        console.log('arrdata ' +this.arrData)
+
+        this.apiRequest()
+        //console.log(r.data)
+      })
+    }
+  },
+  mounted(){
+    this.apiRequest()
   }
 }
 </script>
@@ -447,6 +498,29 @@ form {
 
   img {
     cursor: pointer;
+  }
+}
+
+.anchor{
+  position: fixed;
+  bottom: 0;
+  right: 70px;
+  height: 35px;
+  width: 50px;
+  background-color: #484848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  transition: all .6s;
+
+  &:hover{
+    background-color: $primary-color;
+  }
+
+  i{
+    color: #fff;
   }
 }
 </style>

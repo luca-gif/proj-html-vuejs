@@ -31,7 +31,7 @@
           <div>MEDICAL DEPARTMENT</div>
           <div class="border-blu my-3"></div>
           <ul>
-            <li v-for="list in footerList" :key="`footer${list}`" class="d-flex align-items-center">
+            <li v-for="(list,index) in footerList" :key="`footer${index}`" class="d-flex align-items-center">
             <i class="fa-solid fa-circle-check"></i> {{list.name}}
             </li>
           </ul>
@@ -84,7 +84,7 @@ export default {
   .lm-btn{
     background-color: #fff;
     border: 1px solid black;
-    width: 250px;
+    width: 260px;
     text-align: center;
     margin-top: 30px;
     

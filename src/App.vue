@@ -7,6 +7,8 @@
 
     <FooterComp :footerList="myFooter" />
 
+    
+
   </div>
 </template>
 
@@ -18,7 +20,6 @@ import FooterComp from './components/FooterComp.vue';
 import headerList from './assets/json/headerList'
 import footerList from './assets/json/footerList'
 import doctorsList from './assets/json/doctors'
-
 
 export default {
   name: 'App',
@@ -33,7 +34,7 @@ export default {
     HeaderComp,
     MainComp,
     FooterComp,
-  }
+  },
 }
 </script>
 

@@ -334,6 +334,12 @@ export default {
       axios.post(this.endpoint, this.newAppointment)
       .then((r) => {
         console.log(r.data)
+        this.newAppointment = {
+            name: '',
+            email: '',
+            phone: '',
+            date: ''
+        }
         this.apiRequest()
       })
     }

@@ -1,0 +1,21 @@
+{
+  "clienti": [
+    {
+      "id": 1,
+      "name": "Ugo de Ughi",
+      "email": "ugo.deughi@gmail.com",
+      "phone": "+39 3475050151",
+      "date": "22/07/2022"
+    },
+    {
+      "id": 2,
+      "name": "Marco de Marchi",
+      "email": "marco.demarchi@gmail.com",
+      "phone": "+39 3477484151",
+      "date": "22/06/2022"
+    },
+    {
+      "id": 3
+    }
+  ]
+}

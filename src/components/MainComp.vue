@@ -75,37 +75,8 @@
               </div>
             </div>
           </div>
-
-          <!-- <div class="col-4 card col-center">
-            <img src="../assets/img/doctor-2-200x206.jpg" alt="">
-            <div class="card-text">
-              <h6 class="pt-3">TONY STARK</h6>
-              <h6>Cardiologist</h6>
-              <p class="pt-3 text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque</p>
-              <div class="social d-flex mb-4">
-                <i class="fa-brands fa-facebook-f facebook social-icon"></i>
-                <i class="fa-brands fa-twitter twitter social-icon"></i>
-                <i class="fa-brands fa-instagram instagram social-icon"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-4 card">
-            <img src="../assets/img/doctor-3-200x206.jpg" alt="">
-            <div class="card-text">
-              <h6 class="pt-3">ANNA SMITH</h6>
-              <h6>Nurse Practitioner</h6>
-              <p class="pt-3 text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium voluptatum deleniti atque</p>
-              <div class="social d-flex mb-4">
-                <i class="fa-brands fa-facebook-f facebook social-icon"></i>
-                <i class="fa-brands fa-twitter twitter social-icon"></i>
-                <i class="fa-brands fa-instagram instagram social-icon"></i>
-              </div>
-            </div>
-          </div> -->
-
         </div>
+
       </div>
     </section>
 
@@ -329,6 +300,13 @@ export default {
     apiSend(){
       axios.post(this.endpoint, this.newAppointment)
       .then((r) => {
+        this.newAppointment = {
+            name: '',
+            email: '',
+            phone: '',
+            date: ''
+        }
+        
         console.log(r.data)
         this.apiRequest()
       })

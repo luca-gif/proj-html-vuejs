@@ -245,7 +245,7 @@
             <input @keyup.enter="apiSend()" type="text" v-model.trim="newAppointment.name" placeholder="Name*">
             <input @keyup.enter="apiSend()" type="email" v-model.trim="newAppointment.email" placeholder="Email*">
             <input @keyup.enter="apiSend()" type="text" v-model.trim="newAppointment.phone" placeholder="Phone Number">
-            <input @keyup.enter="apiSend()" type="input" v-model.trim="newAppointment.date" placeholder="Appointment Date">
+            <input @keyup.enter="apiSend()" type="date" v-model.trim="newAppointment.date" placeholder="Appointment Date">
             <textarea v-model.trim="newAppointment.request" name="" cols="30" rows="3" placeholder="How can we help!?"></textarea>
             <div @click="apiSend()" class="lm-btn insert text-white">MAKE AN APPOINTMENT</div>
           </form>
@@ -268,11 +268,7 @@
 
     <!-- Ancora -->
 
-      <a href="#">
-        <div class="anchor">
-          <i class="fa-solid fa-angle-up"></i>
-        </div>
-      </a>
+      <anchorComp/>
 
   </div>
 </template>
@@ -283,11 +279,12 @@ import axios from 'axios';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 import VueSlickCarousel from 'vue-slick-carousel';
+import AnchorComp from './AnchorComp.vue';
 
 
 export default {
   name: 'MainComp',
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel,AnchorComp },
 
   data(){
       return{
@@ -333,12 +330,6 @@ export default {
       axios.post(this.endpoint, this.newAppointment)
       .then((r) => {
         console.log(r.data)
-        this.newAppointment = {
-            name: '',
-            email: '',
-            phone: '',
-            date: ''
-        }
         this.apiRequest()
       })
     }
@@ -493,29 +484,6 @@ form {
 
   img {
     cursor: pointer;
-  }
-}
-
-.anchor{
-  position: fixed;
-  bottom: 0;
-  right: 70px;
-  height: 35px;
-  width: 50px;
-  background-color: #484848;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-  transition: all .6s;
-
-  &:hover{
-    background-color: $primary-color;
-  }
-
-  i{
-    color: #fff;
   }
 }
 </style>
